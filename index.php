@@ -30,10 +30,10 @@
 		$app = array();
 		$app['page_count'] = (int) pq('.pagination a:last')->prev()->text();
 		$app['current_page'] = (int) pq('.pagination em.current')->text();
-		$app['review_count'] = (int) pq('a.resourcesratingssummary meta[itemprop="reviewCount"]', $review)->attr('content');
-		$app['overall_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="ratingValue"]', $review)->attr('content');
-		$app['best_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="bestRating"]', $review)->attr('content');
-		$app['worst_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="worstRating"]', $review)->attr('content');
+		$app['review_count'] = (int) pq('a.resourcesratingssummary meta[itemprop="reviewCount"]')->attr('content');
+		$app['overall_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="ratingValue"]')->attr('content');
+		$app['best_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="bestRating"]')->attr('content');
+		$app['worst_rating'] = (int) pq('a.resourcesratingssummary meta[itemprop="worstRating"]')->attr('content');
 		//$app['prev'] = (int) pq('.pagination a[rel*="prev"]')->text();
 		//$app['next'] = (int) pq('.pagination a[rel="next"]')->text();
 
