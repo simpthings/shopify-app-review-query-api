@@ -10,8 +10,9 @@
 	use phpish\http;
 
 
-	// TODO: Catch 404
+	// TODO: Catch HTTP request Exceptions (404 and 500)
 	// TODO: Homepage with instructions
+	// TODO: RSS/ATOM feed
 
 
 	app\get('/{app}', function ($req){
