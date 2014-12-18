@@ -50,7 +50,7 @@
 		}
 
 		$app['reviews'] = $reviews;
-		if (app\ENV == 'development') return json_encode($app);
+
 		return json_encode($app, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 	});
 
