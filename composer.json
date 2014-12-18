@@ -1,0 +1,9 @@
+{
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.3.0",
+		"phpish/app": "dev-master",
+		"phpish/template": "dev-master",
+		"phpish/http": "dev-master"
+	}
+}
