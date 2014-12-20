@@ -19,9 +19,7 @@
 
 		if (!preg_match('/^[a-z0-9\-\_]*$/', $req['matches']['app'])) return app\response_500('Invalid app name');
 
-		$app = $req['matches']['app'];
-		$url = "https://apps.shopify.com/$app";
-
+		$url = "https://apps.shopify.com/{$req['matches']['app']}";
 		if (isset($req['query']['page']) and ctype_digit($req['query']['page'])) $url .= "?page={$req['query']['page']}";
 
 		$content = http\request("GET $url");
